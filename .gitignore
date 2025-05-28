@@ -173,27 +173,74 @@ cython_debug/
 # PyPI configuration file
 .pypirc
 # Python
-__pycache__/
+_pycache_/
 *.py[cod]
-*.ipynb_checkpoints
-.DS_Store
-
-# Virtualenv
-.env
-.venv
-env/
-venv/
-
-# Logs
+*.so
+*.pyd
+*.pyo
+*.pkl
+*.egg-info/
+.eggs/
 *.log
 
-# Data
-data/
-results/
-figures/generated/
-benchmark.json
+# Jupyter Notebooks
+.ipynb_checkpoints
+*.nbconvert.ipynb
 
-# Models
-*.pth
-*.pt
-checkpoints/
+# Data/outputs (jamais les brutes)
+data/
+*.h5
+*.csv
+*.tsv
+*.npy
+*.npz
+*.db
+*.sqlite
+*.mat
+
+# OS
+.DS_Store
+Thumbs.db
+ehthumbs.db
+*.swp
+*~
+
+# LaTeX/ArXiv
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.pdf
+*.nav
+*.snm
+*.toc
+*.lot
+*.lof
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# Build/virtualenv
+env/
+venv/
+.venv/
+ENV/
+build/
+dist/
+*.egg
+.Python
+
+# Tests
+.coverage
+.tox/
+.pytest_cache/
+
+# IDE
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Figures temporaires
+figures/tmp_*
