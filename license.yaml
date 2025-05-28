@@ -1,0 +1,7 @@
+spdx-id: CC-BY-NC-ND-4.0
+name: Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International
+url: https://creativecommons.org/licenses/by-nc-nd/4.0/
+custom-clauses:
+  - Anti-patent restriction: All intellectual property filings, including patents or trademarks, based on this work are strictly forbidden without explicit written consent from the author.
+  - Commercial restriction: Any form of monetization, including derivative use, is prohibited without prior written authorization.
+  - Required attribution: Attribution must explicitly cite Alexandre ICHAÏ (https://github.com/tonrepo) in all uses, references, or derivative citations.
