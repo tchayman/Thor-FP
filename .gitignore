@@ -172,3 +172,28 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+# Python
+__pycache__/
+*.py[cod]
+*.ipynb_checkpoints
+.DS_Store
+
+# Virtualenv
+.env
+.venv
+env/
+venv/
+
+# Logs
+*.log
+
+# Data
+data/
+results/
+figures/generated/
+benchmark.json
+
+# Models
+*.pth
+*.pt
+checkpoints/
