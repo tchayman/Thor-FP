@@ -1,6 +1,5 @@
 """
-model.py — THOR-FP Unified Scalar Topological Physics
-Implements the core THORModel and main scalar law (θ₀ = 42π).
+model.py — THORModel for THOR-FP.
 Author: Alexandre ICHAÏ (www.thor.love)
 """
 
@@ -8,28 +7,24 @@ import numpy as np
 
 class THORModel:
     """
-    THORModel implements the scalar topological law θ₀ = 42π.
-
-    Methods
-    -------
-    scalar_invariant(theta):
-        Compute the scalar invariant for a given angle theta.
+    THORModel computes scalar invariants based on input theta.
     """
-    def _init_(self, theta0=42 * np.pi):
-        self.theta0 = theta0
+
+    def __init__(self):
+        self.constant = 42
 
     def scalar_invariant(self, theta):
         """
-        Compute the scalar invariant for an input angle theta.
+        Compute the scalar invariant for a given angle theta.
 
         Parameters
         ----------
-        theta : float or np.ndarray
-            Angle(s) in radians.
+        theta : float
+            Angle in radians.
 
         Returns
         -------
-        float or np.ndarray
-            Value of the scalar invariant at theta.
+        float
+            The computed invariant.
         """
-        return self.theta0 * np.cos(theta)
+        return self.constant * np.pi * np.cos(theta)
