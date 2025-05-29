@@ -1,4 +1,4 @@
-# License – THOR-42π Unified Theory by Alexandre ICHAÏ (www.thor.love)
+# License – THOR-FP Unified Theory by Alexandre ICHAÏ (www.thor.love)
 
 This work (including all code, equations, scientific formulations, figures, conceptual frameworks, and associated documentation) is released under the terms of the:
 
@@ -52,3 +52,4 @@ Failing to comply will result in:
 
 All public or academic use of this material (code, theory, or diagrams) must include the following attribution:
 
+> ICHAÏ, Alexandre. "THOR-FP: Unified Scalar Topological Physics (θ₀ = 42π)." www.thor.love.
