@@ -10,21 +10,11 @@ class DeltaPhiDecoder:
     DeltaPhiDecoder applies a decoding operation based on ΔΦ.
     """
 
-    def _init_(self, delta_phi=0.1):
+    def __init__(self, delta_phi=0.1):  # ✅ constructeur Python valide
         self.delta_phi = delta_phi
 
     def decode(self, y):
         """
         Decode input y using ΔΦ.
-
-        Parameters
-        ----------
-        y : float or np.ndarray
-            Input value(s).
-
-        Returns
-        -------
-        float or np.ndarray
-            Decoded value(s).
         """
-        return y / self.delta_phi
+        return y / self.delta_phi  # logique : division par delta_phi
