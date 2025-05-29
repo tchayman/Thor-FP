@@ -1,0 +1,10 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+plt.figure(figsize=(5, 3))
+plt.plot(np.linspace(0, 4*np.pi, 200), np.sin(2 * np.linspace(0, 4*np.pi, 200)), color='green')
+plt.title("fig3_dummy — Placeholder")
+plt.xlabel("x")
+plt.ylabel("sin(2x)")
+plt.savefig("figures/fig3_dummy.png")
+plt.close()
