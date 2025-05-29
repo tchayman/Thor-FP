@@ -7,25 +7,26 @@ import numpy as np
 
 class FractalEncoder:
     """
-    FractalEncoder applies fractal encoding using π and φ.
+    FractalEncoder encode les entrées selon une fonction fractale.
     """
 
-    def _init_(self, pi=np.pi, phi=(1 + 5 ** 0.5) / 2):
-        self.pi = pi
-        self.phi = phi
+    def __init__(self):
+        # On pourrait définir des paramètres ici si nécessaire
+        pass
 
     def encode(self, x):
         """
-        Encode input x using fractal/harmonic structure.
+        Encode l'entrée x avec une combinaison sinusoïdale.
 
-        Parameters
+        Paramètres
         ----------
-        x : float or np.ndarray
-            Input value(s).
+        x : float ou np.ndarray
+            Entrée(s) à encoder.
 
-        Returns
-        -------
-        float or np.ndarray
-            Encoded value(s).
+        Retourne
+        --------
+        float ou np.ndarray
+            Valeur(s) encodée(s).
         """
-        return np.sin(self.pi * x) + np.cos(self.phi * x)
+        phi = (1 + np.sqrt(5)) / 2
+        return np.sin(np.pi * x) + np.cos(phi * x)
