@@ -1,6 +1,6 @@
 """
 test_harmonics.py — THOR-FP Unit Test (Bloc 22)
-Teste la fonction generate_harmonics du module harmonics.py.
+Teste la classe HarmonicSynthesizer du module harmonics.py.
 Author: Alexandre ICHAÏ (www.thor.love)
 """
 
@@ -9,17 +9,25 @@ import os
 import numpy as np
 
 # Pour importer src/thor_fp/
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(_file_), '../src/')))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../src/')))
 
-from thor_fp.harmonics import generate_harmonics
+from thor_fp.harmonics import HarmonicSynthesizer
 
-def test_harmonic_n1_x0():
-    n = 1
-    x = 0.0
-    expected = 0.0  # sin(1*0)/1 = 0
-    result = generate_harmonics(n, x)
-    assert np.isclose(result, expected), f"Expected {expected}, got {result}"
+def test_synthesize_scalar():
+    synth = HarmonicSynthesizer()
+    t = 0.0
+    result = synth.synthesize(t)
+    assert np.isclose(result, 0.0), f"❌ Mauvais résultat à t=0: {result}"
 
-if _name_ == "_main_":
-    test_harmonic_n1_x0()
-    print("test_harmonic_n1_x0 PASSED")
+def test_synthesize_array():
+    synth = HarmonicSynthesizer()
+    t = np.linspace(0, 1, 100)
+    result = synth.synthesize(t)
+    assert isinstance(result, np.ndarray), "❌ Résultat attendu: tableau"
+    assert result.shape == t.shape, "❌ Forme incorrecte"
+    print("✅ test_synthesize_array PASSED")
+
+if __name__ == "__main__":
+    test_synthesize_scalar()
+    test_synthesize_array()
+    print("✅ Tous les tests HarmonicSynthesizer ont réussi.")
