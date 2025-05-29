@@ -1,0 +1,11 @@
+# À lancer dans un notebook ou en script python
+import matplotlib.pyplot as plt
+import numpy as np
+
+plt.figure(figsize=(5, 3))
+plt.plot(np.linspace(0, 2*np.pi, 100), np.sin(np.linspace(0, 2*np.pi, 100)))
+plt.title("fig1_dummy — Placeholder")
+plt.xlabel("x")
+plt.ylabel("sin(x)")
+plt.savefig("figures/fig1_dummy.png")
+plt.close()
