@@ -1,0 +1,10 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+plt.figure(figsize=(5, 3))
+plt.bar(np.arange(5), [1, 2, 3, 2, 1], color='purple')
+plt.title("fig4_dummy — Placeholder")
+plt.xlabel("index")
+plt.ylabel("value")
+plt.savefig("figures/fig4_dummy.png")
+plt.close()
