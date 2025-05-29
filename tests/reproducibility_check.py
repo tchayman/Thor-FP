@@ -9,7 +9,7 @@ import os
 
 def check_module_imports():
     print("Checking module imports...")
-    sys.path.append(os.path.abspath(os.path.join(os.path.dirname(_file_), '../src/')))
+    sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../src/')))
     try:
         from thor_fp.model import THORModel
         from thor_fp.harmonics import generate_harmonics
@@ -18,9 +18,9 @@ def check_module_imports():
         from thor_fp.utils import seed_everything, device
         from thor_fp.config import load_config
         from thor_fp.metrics import accuracy, log
-        print("All module imports PASSED")
+        print("✅ All module imports PASSED")
     except Exception as e:
-        print(f"Module import FAILED: {e}")
+        print(f"❌ Module import FAILED: {e}")
         return False
     return True
 
@@ -34,14 +34,14 @@ def check_notebooks_exist():
     ]
     missing = [nb for nb in notebook_list if not os.path.exists(nb)]
     if missing:
-        print(f"Missing notebooks: {missing}")
+        print(f"❌ Missing notebooks: {missing}")
         return False
-    print("All notebooks found")
+    print("✅ All notebooks found")
     return True
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     ok = check_module_imports() and check_notebooks_exist()
     if ok:
-        print("✅ Reproducibility check PASSED")
+        print("🎉 ✅ Reproducibility check PASSED")
     else:
-        print("❌ Reproducibility check FAILED")
+        print("🚫 ❌ Reproducibility check FAILED")
