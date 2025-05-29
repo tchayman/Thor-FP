@@ -1,0 +1,10 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+plt.figure(figsize=(5, 3))
+plt.scatter(np.random.rand(20), np.random.rand(20), color='red')
+plt.title("fig5_dummy — Placeholder")
+plt.xlabel("x")
+plt.ylabel("y")
+plt.savefig("figures/fig5_dummy.png")
+plt.close()
