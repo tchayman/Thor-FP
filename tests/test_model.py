@@ -9,7 +9,7 @@ import os
 import numpy as np
 
 # Permet d'importer src/thor_fp/ même si le script est lancé depuis la racine
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(_file_), '../src/')))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../src/')))
 
 from thor_fp.model import THORModel
 
@@ -20,6 +20,6 @@ def test_scalar_invariant_basic():
     result = model.scalar_invariant(theta)
     assert np.isclose(result, expected), f"Expected {expected}, got {result}"
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     test_scalar_invariant_basic()
     print("test_scalar_invariant_basic PASSED")
