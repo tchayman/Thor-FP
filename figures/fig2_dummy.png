@@ -1,0 +1,10 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+plt.figure(figsize=(5, 3))
+plt.plot(np.linspace(0, 10, 100), np.cos(np.linspace(0, 10, 100)), color='orange')
+plt.title("fig2_dummy — Placeholder")
+plt.xlabel("x")
+plt.ylabel("cos(x)")
+plt.savefig("figures/fig2_dummy.png")
+plt.close()
