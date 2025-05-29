@@ -1,0 +1,4 @@
+model, metric, value, comment
+THORModel, accuracy, 0.99, "Dummy value for demonstration"
+FractalEncoder, mse, 0.05, "Dummy value for demonstration"
+DeltaPhiDecoder, r2_score, 0.97, "Dummy value for demonstration"
